@@ -15,8 +15,8 @@ const ContactUs = () => {
             <BsEnvelope className={styles.icon} />
           </div>
           <p className={styles.cardSub}>Reach out anytime</p>
-          <a href="mailto:hello@email.com" className={styles.cardValue}>
-            hafsart0@gmail.com
+          <a href="mailto:info@hafsart.com" className={styles.cardValue}>
+            info@hafsart.com
           </a>
         </div>
 
