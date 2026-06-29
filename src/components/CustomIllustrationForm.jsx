@@ -44,7 +44,7 @@ const CustomIllustrationForm = () => {
       form.append("notes", formData.notes);
 
       const response = await axios.post(
-        "https://formspree.io/f/xkolblye",
+        `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID_2}`,
         form,
         {
           headers: {

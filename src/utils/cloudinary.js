@@ -1,4 +1,4 @@
-const CLOUDINARY_BASE = "https://res.cloudinary.com/dtowqekrg/image/upload";
+const CLOUDINARY_BASE = `https://res.cloudinary.com/${import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload`;
 
 export const buildUrl = (image, width) => {
   const transforms = [
