@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./faq.module.css";
+import styles from "./Faq.module.css";
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
