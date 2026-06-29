@@ -1,73 +1,73 @@
-import React from "react";
 import Navbar from "../../Navbar/Navbar.jsx";
-import Hero from "../../Hero/Hero.jsx";
-import Card from "../../Card/Card.jsx";
 import Arch from "../../Arch/Arch.jsx";
-import ContentBlock from "../../ContentBlock/ContentBlock.jsx";
-import { GiLotusFlower } from "react-icons/gi";
 import styles from "./Home.module.css";
-import coupleImage from "../../../../assets/images/couple.png";
-import ImageGrid from "../../Image Grid/ImageGrid.jsx";
+import RecentEventsGrid from "../../Recent Events Grid /RecentEventsGrid .jsx";
 import Footer from "../../Footer/Footer.jsx";
 import { Link } from "react-router-dom";
+import { faqData } from "../../../data/faqData";
+import Faq from "../../Faq/Faq";
+import BookingForm from "../../BookingForm";
+import ContactUs from "../../ContactUs/ContactUs";
+import ClientLogos from "../../ClientLogos/ClientLogos";
+import Testimonial from "../../Card/Testimonial.jsx";
 
 const Home = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <Navbar />
-        <Hero />
-        <div className={styles.arch}></div>
+        <div className={styles.hero}>
+          <video
+            className={styles.heroVideo}
+            src="https://res.cloudinary.com/dtowqekrg/video/upload/f_auto,q_auto/v1782678226/live-events_yqlyz0.mov"
+            poster="/images/live-events-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        </div>
       </div>
 
       <div className={styles.services}>
-        <div className={styles.sticker}>
-          {" "}
-          <GiLotusFlower />
-        </div>
         <div className={styles.arches}>
-          <Link to={"/live"}>
-            <Arch title="Live Events" image={coupleImage} />
-          </Link>
           <Link to={"/wedding"}>
-            <Arch title="Weddings" image={coupleImage} />
+            <Arch
+              title="Weddings"
+              image="https://res.cloudinary.com/dtowqekrg/image/upload/f_auto,q_auto/v1782677760/IMG_2193_qjooos.webp"
+            />
           </Link>
-          <Link to={"/custom"}>
-            <Arch title="Custom Portraits" image={coupleImage} />
+          <Link to={"/brand"}>
+            <Arch
+              title="Brand Events"
+              image="https://res.cloudinary.com/dtowqekrg/image/upload/f_auto,q_auto/v1782677760/IMG_0901_o6lzzj.webp"
+            />
+          </Link>
+          <Link to={"/other"}>
+            <Arch
+              title="Birthdays & Showers"
+              image="https://res.cloudinary.com/dtowqekrg/image/upload/f_auto,q_auto/v1782677761/IMG_9847_vjw7sf.webp"
+            />
           </Link>
         </div>
       </div>
-
-      <ContentBlock />
-      <div className="flex">
-        <ImageGrid />
+      <ClientLogos></ClientLogos>
+      <div className="justify-center items-center w-full">
+        <RecentEventsGrid />
       </div>
 
-      <div className={styles.testimonial}>
-        <h1 className={styles.cardTitle}>
-          Our <span className={styles.highlight}>happy </span> clients says
-          about us
-        </h1>
-        <div className={styles.cards}>
-          <Card
-            review="This event was fantastic! Everything was perfect from start to finish."
-            clientImg="path/to/client-image.jpg"
-            clientName="Jane Doe"
-            eventType="Wedding"
-          />
-          <Card
-            review="This event was fantastic! Everything was perfect from start to finish."
-            clientImg="path/to/client-image.jpg"
-            clientName="Jane Doe"
-            eventType="Wedding"
-          />
-          <Card
-            review="This event was fantastic! Everything was perfect from start to finish."
-            clientImg="path/to/client-image.jpg"
-            clientName="Jane Doe"
-            eventType="Wedding"
-          />
-        </div>
+      <div id="faq-section" className={styles.faq}>
+        <h2 className="title-secondary">Frequently Asked Questions</h2>
+        <Faq faqs={faqData} />
+      </div>
+      <Testimonial></Testimonial>
+
+      <div id="booking-section" className={styles.bookingSection}>
+        <BookingForm />
+      </div>
+      <div id="contact-section">
+        <ContactUs />
       </div>
       <Footer />
     </div>

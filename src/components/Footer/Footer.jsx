@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./Footer.module.css"; // Import your CSS module
+import styles from "./Footer.module.css";
 import { BsInstagram, BsTiktok } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,24 +9,26 @@ const Footer = () => {
         <div className={styles.header}>
           <div className={styles.linkGroups}>
             <div className={styles.linkGroup}>
-              <a href="#" className={styles.link}>
+              <Link to="/book#contact-section" className={styles.link}>
                 Contact
-              </a>
+              </Link>
             </div>
             <div className={styles.linkGroup}>
-              <a href="#" className={styles.link}>
+              <a href="/book" className={styles.link}>
                 Book
               </a>
             </div>
             <div className={styles.linkGroup}>
-              {/* <h4 className={styles.title}>FAQ</h4> */}
-              <a href="#" className={styles.link}>
+              <Link to="/book#faq-section" className={styles.link}>
                 FAQ
-              </a>
+              </Link>
             </div>
           </div>
           <div className={styles.socialIcons}>
-            <a href="#" className={styles.icon}>
+            <a
+              href="https://www.instagram.com/hafsartt"
+              className={styles.icon}
+            >
               <BsInstagram />
             </a>
             <a href="#" className={styles.icon}>
@@ -37,8 +39,11 @@ const Footer = () => {
         <hr className={styles.divider} />
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
-            <a href="#" className={styles.copyrightLink}>
-              © 2024 Hafsart
+            <a
+              href="https://www.tiktok.com/@hafsartt_"
+              className={styles.copyrightLink}
+            >
+              © 2026 Hafsart
             </a>
           </div>
         </div>

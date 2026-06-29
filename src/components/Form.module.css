@@ -1,0 +1,139 @@
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(197, 173, 197, 1) 0%,
+    rgba(178, 181, 223, 1) 100%
+  );
+}
+
+.content {
+  flex: 1 1 400px;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.fieldContainer {
+  flex: 1 1 400px;
+  max-width: 520px;
+  margin-right: 60px;
+}
+
+.formField {
+  padding-bottom: 4px;
+  text-align: left;
+}
+.formField label {
+  display: block;
+  margin: 6px 0px;
+  font-weight: 600;
+  color: white;
+  font-size: 14px;
+}
+
+.formField input,
+.formField select {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+}
+.formField textarea {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 70px;
+  max-height: 35vh;
+  background-color: white;
+}
+
+.formField ::placeholder {
+  color: #ddd;
+  font-size: 13px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px auto 0;
+  width: fit-content;
+  background-color: #433982;
+  color: white;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.success {
+  color: white;
+  font-size: 35px;
+  margin: auto;
+}
+
+.title {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.description {
+  color: white;
+  font-size: 16px;
+}
+
+.sticker {
+  position: absolute;
+  left: 250px;
+  top: -45px;
+}
+
+@media screen and (max-width: 830px) {
+  .description {
+    margin-top: 4px;
+  }
+  .submitButton {
+    margin-top: 24px;
+  }
+  .formContainer {
+    margin-top: 20px;
+  }
+  .fieldContainer {
+    margin-right: 0;
+  }
+  .content {
+    margin-top: 10px;
+  }
+  .sticker {
+    position: absolute;
+    top: -25px;
+    width: 45px;
+    height: 45px;
+  }
+  .submitButton {
+    display: flex;
+    justify-content: center;
+    margin: 24px auto 0;
+  }
+}

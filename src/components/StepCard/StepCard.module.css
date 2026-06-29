@@ -1,0 +1,27 @@
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5%;
+  color: #433982;
+}
+
+.description {
+  font-size: 16px;
+  color: #8b9ab0;
+}
+
+.number {
+  color: #c5adc5;
+  padding-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}

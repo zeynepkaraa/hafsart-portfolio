@@ -1,85 +1,67 @@
-.page{
-    width: 100%;
-    margin: 0;
+.page {
+  width: 100%;
+  margin: 0;
 }
-.container{
-    width: 100%;
-    margin: 0;
-    background: rgb(197,173,197);
-    background: linear-gradient(180deg, rgba(197,173,197,1) 0%, rgba(178,181,223,1) 100%);
-}
-
-.services{
-    position: relative;
-}
-.arches{
-    display: flex;
-    justify-content: space-between; /* Ensures equal spacing between arches */
-    gap: 16px; /* Adjust the gap as needed */
-    margin: 5% 10% ;
-   
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.sticker{
-    position: absolute;
-    top: 360px; /* Adjust the top position as needed */
-    left: 100px; /* Adjust the left position as needed */
-    font-size: 70px;
-    z-index: 3;
-    color: #C5ADC5;
+.services {
+  position: relative;
 }
-.arch {
-    width: 450px;
-    height: 650px;
-    border-radius: 0 0 330px 330px; /* Creates a bottom circle with a top rectangle */
-    z-index: 2;
-    position: absolute;
-    top:0;
-    left: 60%;
-    background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 90%);
+.arches {
+  display: flex;
+  justify-content: space-between;
+  margin: 4% 10%;
+}
+
+.sticker {
+  position: absolute;
+  top: 360px;
+  left: 220px;
+  font-size: 70px;
+  z-index: 3;
+  color: #c5adc5;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #c5adc5;
+  text-align: center;
+}
+.heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.faq {
+  padding: 6% 0;
+}
+@media screen and (max-width: 830px) {
+  .arch {
+    display: none;
   }
 
-.testimonial{
-    margin: 10%;
-    margin-left: 10%;
-    
-}
-.cards{
-    margin-top: 5%;
-    margin-left: 7%;
-    z-index: 2;
-    display: flex;
+  .arches {
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    padding: 13px;
-}
-
-.cardTitle{
-    color:#433982;
-    font-weight: 500;
-    
-}
-
-.highlight{
-    font-family: 'Times New Roman', Times, serif;
-    color:#C5ADC5;
-}
-  @media screen and (max-width: 830px){
-    .arch{
-        display: none;
-    }
-
-    .arches{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cards{
-        gap: 24px;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
   }
-  
+
+  .sticker {
+    display: none;
+  }
+
+  .container {
+    height: 50vh;
+  }
+  .heroVideo {
+    transform: scale(2);
+    transform-origin: center center;
+  }
+}

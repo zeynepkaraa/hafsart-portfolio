@@ -1,73 +1,121 @@
-/* Global reset and default font */
+@import "tailwindcss";
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
+@import "styles/globals.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  font-family: 'THICCCBOI', sans-serif; /* Fallback to sans-serif */
+  font-family: "THICCCBOI", sans-serif;
 }
 
-/* Font-face definitions for different weights */
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-Thin.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-Light.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-Regular.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-Medium.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-SemiBold.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-Bold.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-ExtraBold.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-Black.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCCBOI';
-  src: url('../assets/fonts/THICCCBOI-ThicccAF.woff2') format('woff2');
+  font-family: "THICCCBOI";
+  src: url("../assets/fonts/THICCCBOI-ThicccAF.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SantaCatalina";
+  src: url("../assets/fonts/SantaCatalina1.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+.title-primary {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #433982;
+  line-height: 1.1;
+}
+.title-secondary {
+  font-size: 30px;
+  font-weight: 600;
+  color: #c5adc5;
+  text-align: center;
+  line-height: 1.1;
+}
+.title-tertiary {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.description {
+  margin: 2% 0;
+  font-size: 18px;
+  color: #8b9ab0;
+}
+
+@media screen and (max-width: 830px) {
+  .title-primary {
+    font-size: 32px;
+    margin-bottom: 3%;
+  }
+  .title-secondary {
+    font-size: 28px;
+    font-weight: 600;
+    color: #c5adc5;
+    text-align: center;
+    line-height: 1.1;
+  }
+}

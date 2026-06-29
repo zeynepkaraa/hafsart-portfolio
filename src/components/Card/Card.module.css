@@ -1,60 +1,89 @@
 .card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-top: 15px; 
-    background-color: white;
-    width: 350px; /* Reduced width */
-    height: 240px;
-    z-index: 2;
-    display: flex;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 15px;
+  background-color: white;
+  width: 400px;
+  z-index: 2;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+}
+
+.icon {
+  font-size: 35px;
+  color: #433982;
+  margin-bottom: 10px;
+  margin-left: 7%;
+}
+
+.review {
+  margin: 0 5%;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: #8b9ab0;
+}
+
+.clientInfo {
+  display: flex;
+  align-items: center;
+  background-color: #c5adc5;
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+  color: white;
+  padding-bottom: 15px;
+}
+
+.clientName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1px;
+  margin-left: 8px;
+}
+
+.eventType {
+  font-size: 12px;
+  margin-left: 8px;
+}
+.testimonial {
+  margin: 3% 10%;
+  text-align: center;
+}
+.cards {
+  margin-top: 3%;
+  z-index: 2;
+  display: flex;
+  gap: 25px;
+  padding: 13px;
+  text-align: left;
+}
+
+.cardTitle {
+  color: #433982;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.highlight {
+  font-family: "SantaCatalina", sans-serif;
+  color: #c5adc5;
+}
+
+@media screen and (max-width: 830px) {
+  .card {
+    width: 375px;
   }
-  
-  .icon {
-    font-size: 35px;
-    color: #433982;
-    margin-bottom: 10px; 
-    margin-left:7%;
-    
-  }
-  
-  .review {
-    margin-left:7%;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 16px;
-    color: #8B9AB0
-  }
-  
-  .clientInfo {
-    display: flex;
+  .cards {
+    gap: 24px;
+    flex-direction: column;
     align-items: center;
-    background-color: #C5ADC5;; /* Different colored background */
-    padding: 8px;
-    border-radius: 0 0 8px 8px;
-    color: white;
-    padding-bottom:15px;
   }
-  
-  .clientImg {
-    margin-left:7%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 12px;
-    border: 1px solid black;
+  .title,
+  .cardTitle {
+    font-size: 24px;
   }
-  
-  .clientName {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 1px;
+  .testimonial {
+    margin: 10%;
   }
-  
-  .eventType {
-    font-size: 12px;
-    margin: 0;
-  }
-  
+}

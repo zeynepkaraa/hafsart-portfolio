@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
 import styles from "./About.module.css";
@@ -12,32 +11,40 @@ const About = () => {
           <div className={styles.imgWrapper}>
             <img
               className={styles.image}
-              src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              src="https://res.cloudinary.com/dtowqekrg/image/upload/f_auto,q_auto,w_1200/v1782678409/DSC04438_el1ef1.webp"
             />
           </div>
         </div>
         <div className={styles.content}>
-          <h1 className={styles.title}>
+          <h1 className="title-primary">
             {" "}
             Hi, I am <span className={styles.highlight}> Hafsa </span>
           </h1>
-          <p className={styles.description}>
+          <p
+            className="description"
+            style={{ marginRight: "15%", marginTop: "5%" }}
+          >
             {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            sit amet sapien et sapien fermentum convallis. Quisque nec odio eget
-            velit ultrices tincidunt. Fusce vestibulum, nulla sit amet aliquet
-            malesuada, enim justo suscipit velit, sit amet egestas odio odio non
-            felis. Nulla facilisi. Praesent ac erat nec sapien mollis malesuada
-            sed in felis. Sed volutpat, eros id interdum pharetra, turpis mi
-            facilisis eros, a consectetur dui purus in augue. Donec aliquet nisl
-            vel orci aliquet, sit amet suscipit justo malesuada.
+            I’m a Toronto-based live illustrator specializing in
+            fashion-inspired guest portraits for weddings, events, and special
+            celebrations. Over the past few years, I’ve had the opportunity to
+            work at weddings, events, and luxury brand activations across
+            Toronto, collaborating with brands like Tiffany & Co., Lincoln,
+            Creed, and Melanie Lyne.
+            <br></br>
+            <br></br>
+            I’m currently studying Fashion Design at Toronto Metropolitan
+            University, which constantly inspires me creatively and continues to
+            help me grow as an illustrator. It has also shaped my illustration
+            style, helping me focus on details like fabric, movement, texture,
+            and styling while still capturing people quickly during live events.
           </p>
         </div>
       </div>
       <svg
         className={styles.sticker}
-        width="115"
-        height="114"
+        width="85"
+        height="84"
         viewBox="0 0 135 134"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -56,56 +63,6 @@ const About = () => {
         />
       </svg>
 
-      <div className={styles.secondary}>
-        <h1 className={styles.title2}> Meet the Team</h1>
-
-        <div className={styles.teamContainer}>
-          <div className={styles.card}>
-            <img
-              src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt="Team Member 1"
-              className={styles.photo}
-            />
-
-            <h2 className={styles.teamMemberName}>Zeyneb </h2>
-            <h3 className={styles.teamMemberRole}>Illustrator</h3>
-            <p className={styles.teamMemberBio}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              sit amet sapien et sapien fermentum convallis. Quisque nec odio
-              eget velit ultrices tincidunt. Fusce vestibulum, nulla sit amet
-              aliquet malesuada, enim justo suscipit velit, sit amet egestas
-              odio odio non felis. Nulla facilisi. Praesent ac erat nec sapien
-              mollis malesuada sed in felis. Sed volutpat, eros id interdum
-              pharetra, turpis mi facilisis eros, a consectetur dui purus in
-              augue. Donec aliquet nisl vel orci aliquet, sit amet suscipit
-              justo malesuada.
-            </p>
-          </div>
-
-          <div className={styles.card}>
-            <img
-              src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-              alt="Team Member 2"
-              className={styles.photo}
-            />
-            <h2 className={styles.teamMemberName}>Maya </h2>
-            <h3 className={styles.teamMemberRole}>Assistant/Photographer</h3>
-            <p className={styles.teamMemberBio}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              sit amet sapien et sapien fermentum convallis. Quisque nec odio
-              eget velit ultrices tincidunt. Fusce vestibulum, nulla sit amet
-              aliquet malesuada, enim justo suscipit velit, sit amet egestas
-              odio odio non felis. Nulla facilisi. Praesent ac erat nec sapien
-              mollis malesuada sed in felis. Sed volutpat, eros id interdum
-              pharetra, turpis mi facilisis eros, a consectetur dui purus in
-              augue. Donec aliquet nisl vel orci aliquet, sit amet suscipit
-              justo malesuada.
-            </p>
-          </div>
-          <div className={styles.blob}></div>
-          <div className={styles.blob2}></div>
-        </div>
-      </div>
       <Footer />
     </div>
   );

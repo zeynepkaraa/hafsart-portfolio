@@ -1,31 +1,44 @@
-import React from "react";
-import Navbar from "../../Navbar/Navbar";
-import styles from "./EventPage.module.css";
-import eventsData from "../../../data/events.json";
-import EventCard from "../../Event/EventCard";
-import Footer from "../../Footer/Footer";
+import EventPage from "../EventPage/EventPage";
+import { getImageProps } from "../../../utils/cloudinary";
+
+const weddingsImages = [
+  {
+    id: "IMG_2264_x1ljps",
+    crop: "c_crop,g_north_west,h_3083,w_4284,y_1267",
+    ext: "webp",
+  },
+  { id: "IMG_3322_mezyki", ext: "webp" },
+  { id: "DSC04394_ze4q4z", ext: "webp" },
+  { id: "IMG_2233_m9qysi", ext: "webp" },
+  {
+    id: "IMG_6054_hpl1xs",
+    crop: "c_crop,g_north_west,h_2963,w_4284,y_1717",
+    ext: "webp",
+  },
+  { id: "IMG_0658_udbkiu", ext: "webp" },
+  {
+    id: "IMG_0211_xegbno",
+    crop: "c_crop,g_north_west,h_2532,w_3670,y_1209",
+    ext: "webp",
+  },
+  { id: "IMG_3385_yt2eum", ext: "webp" },
+  {
+    id: "IMG_8858_pcflwk",
+    crop: "c_crop,g_north_west,h_3111,w_4284,y_1665",
+    ext: "webp",
+  },
+  { id: "IMG_1514_ar7var", ext: "webp" },
+  { id: "IMG_8975_aupgkj", ext: "webp" },
+  { id: "IMG_5173_mwz5rw", ext: "webp" },
+];
 
 const Weddings = () => {
-  const weddings = eventsData.filter((event) => event.type === "Wedding");
   return (
-    <div className={styles.page}>
-      <Navbar />
-      <div className={styles.container}>
-        <h1 className={styles.title}>Weddings</h1>
-        <p className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
-          vestibulum.
-        </p>
-        <div className={styles.grid}>
-          {weddings.map((event) => (
-            <EventCard key={event.id} event={event} />
-          ))}
-        </div>
-      </div>
-      <Footer />
-    </div>
+    <EventPage
+      title="Weddings"
+      images={weddingsImages}
+      getImageProps={getImageProps}
+    />
   );
 };
 

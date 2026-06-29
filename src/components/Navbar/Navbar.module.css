@@ -1,92 +1,108 @@
-
-.navbar{
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    padding-top: 61px;
-    z-index:3;
-    margin: 0 7%;
-    font-family: 'THICCCBOI';
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 7%;
+  z-index: 10;
+  font-family: "THICCCBOI";
 }
 
-
-.title{
-    
-    font-size:30px;
-    font-weight:600;
-    text-decoration: none;
-    color:white;
+.absolute {
+  position: absolute;
 }
 
-.newTitle{
-    color:#433982;
+.title {
+  font-family: "SantaCatalina", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  padding-top: 61px;
 }
 
-.menu{
-    display: flex;
+.newTitle {
+  color: #433982;
 }
 
-.menuItems{
-    display: flex;
-    gap:47px;
-    list-style: none;
+.menu {
+  display: flex;
 }
 
+.menuItems {
+  display: flex;
+  gap: 47px;
+  list-style: none;
+  padding-top: 61px;
+}
 
-.menuIcon{
+.menuIcon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding-top: 61px;
+}
+
+.newMenu {
+  color: #433982;
+}
+
+.menuItems a {
+  font-size: 19px;
+  text-decoration: none;
+  color: white;
+}
+
+.newMenuItems a {
+  color: #433982;
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1% 8%;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+    z-index: 3;
+  }
+
+  .title {
+    padding-top: 48px;
+  }
+
+  .menuIcon {
+    display: block;
+    cursor: pointer;
+    left: 0;
+  }
+
+  .menuItems {
     display: none;
-    font-size: 30px;
-    cursor:pointer;
-    color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 24px 33px;
+  }
+
+  .menuOpen {
+    display: flex;
+    z-index: 1;
+  }
 }
-.menuItems a{
-    font-size: 19px;
-    text-decoration: none;
-    color: #433982;
-
-}
-
-@media screen and (max-width: 830px){
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start
-    }
-
-    .menu{
-        position: absolute;
-        right: 0;
-        margin-right: 5%;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 11px;
-        z-index: 3;
-
-    }
-
-    .menuIcon{
-        display: block;
-        cursor:pointer;
-        left:0;
-    }
-
-    .menuItems{
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 13px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 24px 33px;
-        
-    }
-    
-    .menuOpen{
-        display: flex;
-        z-index: 1;
-    }
-    
-    }

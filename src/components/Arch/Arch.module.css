@@ -1,48 +1,52 @@
 .arch {
-    position: relative;
-    width: 330px;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50% 50% 0 0;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-  }
-  
-  .arch::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(234,222,234);
-    background: linear-gradient(0deg, rgba(234,222,234,1) 0%, rgba(178,181,223,0) 100%);
-    border-radius: 50% 50% 0 0; /* Match the border-radius of the .arch */
-    z-index: 1; /* Ensure the gradient is above the background image */
-    transition: opacity 0.2s ease; /* Smooth transition for hover effects */
+  position: relative;
+  height: 400px;
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 330 / 400;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50% 50% 0 0;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  text-decoration: none;
+}
 
-  }
-  .arch:hover {
-    transform: scale(1.02); /* Slightly enlarge the element */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+.arch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(234, 222, 234);
+  background: linear-gradient(
+    0deg,
+    rgba(234, 222, 234, 1) 0%,
+    rgba(178, 181, 223, 0) 100%
+  );
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+}
+.arch:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.arch:hover::before {
+  opacity: 0.3;
+}
 
-  }
-  .arch:hover::before {
-    opacity: 0.3; /* Change the opacity of the gradient on hover */
-  }
-  
-  
-  .title {
-    color: #433982;
-    font-size: 36px;
-    font-weight: 600;
-    margin-left: 10%;
-    margin-right: 50%;
-    margin-bottom: 4%;
-    z-index: 2;
-    text-decoration: none;
-  }
+.title {
+  color: #433982;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 10%;
+  margin-bottom: 4%;
+  z-index: 2;
+  text-decoration: none;
+}

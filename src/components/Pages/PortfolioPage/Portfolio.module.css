@@ -1,45 +1,37 @@
-.page{
-    width: 100%;
-    margin: 0;
+.page {
+  width: 100%;
+  margin: 0;
 }
 
-.container{
-    margin: 5% 0;
+.container {
+  margin: 2% 0;
 }
 
-.arches{
-    display: flex;
-    justify-content: space-between; /* Ensures equal spacing between arches */
-    gap: 16px; /* Adjust the gap as needed */
-    margin: 2% 10% ;
-   
-}
-.title{
-    text-align: center;
-    font-size: 3rem;
-    
-    color: #C5ADC5;
-    text-decoration: none;
-    margin-bottom: 10px;
-    
+.arches {
+  display: flex;
+  justify-content: space-between;
+  margin: 4% 20%;
 }
 
-a{
-    text-decoration: none;
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #c5adc5;
+  font-weight: 600;
 }
 
-@media screen and (max-width: 830px){
-   
+a {
+  text-decoration: none;
+}
 
-    .arches{
-        flex-direction: column;
-        align-items: center;
-        gap:20px;
-    }
-    .title{
-        margin: 25px 0;
-        font-size: 36px;
-    }
-
-    
+@media screen and (max-width: 830px) {
+  .arches {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
+  .title {
+    margin: 25px 0;
+    font-size: 36px;
+  }
+}
