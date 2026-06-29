@@ -4,7 +4,6 @@
 
 @source "../src/components/**/*.{js,jsx,ts,tsx}"; /* adjust path as needed */
 
-@plugin "@tailwindcss/typography";
 @plugin "tailwindcss-react-aria-components";
 @plugin "tailwindcss-animate";
 
