@@ -28,7 +28,7 @@
 @font-face {
   font-family: "THICCCBOI";
   src: url("/fonts/THICCCBOI-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-weight: 400 !important;
   font-style: normal;
   font-display: swap;
 }
@@ -75,7 +75,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-ThicccAF.ttf") format("truetype");
+  src: url("/fonts/THICCCBOI-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
