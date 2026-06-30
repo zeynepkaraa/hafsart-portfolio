@@ -12,10 +12,12 @@ import TiffanyCo from "./components/Pages/EventPage/TiffanyCo.jsx";
 import Creed from "./components/Pages/EventPage/Creed.jsx";
 import LatestWedding from "./components/Pages/EventPage/LatestWedding.jsx";
 import BridalShower from "./components/Pages/EventPage/BridalShower.jsx";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         {/* Public Routes */}
         <Route index element={<HomePage />} />
