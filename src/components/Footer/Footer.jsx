@@ -14,9 +14,9 @@ const Footer = () => {
               </Link>
             </div>
             <div className={styles.linkGroup}>
-              <a href="/book" className={styles.link}>
+              <Link to="/book" className={styles.link}>
                 Book
-              </a>
+              </Link>
             </div>
             <div className={styles.linkGroup}>
               <Link to="/book#faq-section" className={styles.link}>
@@ -31,21 +31,14 @@ const Footer = () => {
             >
               <BsInstagram />
             </a>
-            <a href="#" className={styles.icon}>
+            <a href="https://www.tiktok.com/@hafsartt_" className={styles.icon}>
               <BsTiktok />
             </a>
           </div>
         </div>
         <hr className={styles.divider} />
         <div className={styles.footerBottom}>
-          <div className={styles.copyright}>
-            <a
-              href="https://www.tiktok.com/@hafsartt_"
-              className={styles.copyrightLink}
-            >
-              © 2026 Hafsart
-            </a>
-          </div>
+          <div className={styles.copyright}>© 2026 Hafsart</div>
         </div>
       </div>
     </footer>
