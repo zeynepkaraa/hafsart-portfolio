@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
 const OVERLAY_PAGES = ["/"];
 
@@ -14,12 +15,12 @@ const Navbar = () => {
 
   return (
     <nav className={`${styles.navbar} ${isOverlay ? styles.absolute : ""}`}>
-      <a
+      <Link
         className={`${styles.title} ${!isOverlay ? styles.newTitle : ""}`}
-        href="/"
+        to="/"
       >
         Hafsart
-      </a>
+      </Link>
 
       <div className={styles.menu}>
         <div
@@ -36,13 +37,13 @@ const Navbar = () => {
           onClick={() => setMenuOpen(false)}
         >
           <li>
-            <a href="/portfolio">Portfolio</a>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/book">Book</a>
+            <Link to="/book">Book</Link>
           </li>
         </ul>
       </div>
