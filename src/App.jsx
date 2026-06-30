@@ -13,10 +13,12 @@ import Creed from "./components/Pages/EventPage/Creed.jsx";
 import LatestWedding from "./components/Pages/EventPage/LatestWedding.jsx";
 import BridalShower from "./components/Pages/EventPage/BridalShower.jsx";
 import ScrollToTop from "./components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
     <BrowserRouter>
+      <Analytics></Analytics>
       <ScrollToTop />
       <Routes>
         {/* Public Routes */}
