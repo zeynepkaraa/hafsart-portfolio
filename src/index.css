@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-Thin.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-Thin.ttf") format("ttf");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-Light.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-Light.ttf") format("ttf");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-Regular.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-Medium.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-Medium.ttf") format("ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-SemiBold.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-SemiBold.ttf") format("ttf");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -51,7 +51,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-Bold.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-Bold.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -59,7 +59,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-ExtraBold.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-ExtraBold.ttf") format("ttf");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -67,7 +67,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-Black.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-Black.ttf") format("ttf");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -75,7 +75,7 @@
 
 @font-face {
   font-family: "THICCCBOI";
-  src: url("/fonts/THICCCBOI-ThicccAF.woff2") format("woff2");
+  src: url("/fonts/THICCCBOI-ThicccAF.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
