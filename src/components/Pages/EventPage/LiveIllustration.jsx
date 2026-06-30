@@ -10,7 +10,7 @@ const LiveIllustration = () => {
       <Navbar />
       <div className={styles.container}>
         <h1 className={styles.title}>Live Illustrations</h1>
-        <div className={styles.grid}>
+        <div className={styles.arches}>
           <Link to={"/wedding"}>
             <Arch
               title="Weddings"

@@ -20,10 +20,7 @@ const About = () => {
             {" "}
             Hi, I am <span className={styles.highlight}> Hafsa </span>
           </h1>
-          <p
-            className="description"
-            style={{ marginRight: "15%", marginTop: "5%" }}
-          >
+          <p className={styles.description}>
             {" "}
             I’m a Toronto-based live illustrator specializing in
             fashion-inspired guest portraits for weddings, events, and special
