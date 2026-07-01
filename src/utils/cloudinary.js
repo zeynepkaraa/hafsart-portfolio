@@ -20,5 +20,5 @@ export const getImageProps = (image, index) => ({
   sizes: "(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px",
   loading: index < 2 ? "eager" : "lazy",
   decoding: "async",
-  alt: `Brand event ${index + 1}`,
+  alt: image.alt ?? `Hafsart live fashion illustration ${index + 1}`,
 });

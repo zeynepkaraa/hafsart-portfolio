@@ -71,6 +71,7 @@
   margin-bottom: 42px;
   margin-right: 15%;
   color: #8b9ab0;
+  margin-top: 5%;
 }
 
 .highlight {
@@ -81,8 +82,8 @@
 
 .sticker {
   position: absolute;
-  top: 33%;
-  right: 9%;
+  top: 28%;
+  right: 11%;
 }
 
 .photo {

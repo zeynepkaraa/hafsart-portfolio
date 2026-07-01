@@ -8,12 +8,31 @@ import { getImageProps } from "../../../utils/cloudinary";
 import SEO from "../../SEO.jsx";
 
 const images = [
-  { id: "IMG_1076_ndh1f2" },
-  { id: "IMG_4458_oxtvg9" },
-  { id: "IMG_3798_zmqjex" },
-  { id: "IMG_4353_m6btp3" },
-  { id: "IMG_5526_mhxks7" },
-  { id: "IMG_0786_u0kxoe", transforms: "e_brightness:5" },
+  {
+    id: "IMG_1076_ndh1f2",
+    alt: "Custom hand-drawn fashion illustration of wedding party with bride and groomsmen by Hafsa",
+  },
+  {
+    id: "IMG_4458_oxtvg9",
+    alt: "Custom birthday fashion illustration of woman in black gown with balloons by Hafsa",
+  },
+  {
+    id: "IMG_3798_zmqjex",
+    alt: "Custom illustration of bridesmaids in pink dresses with floral details by Hafsa",
+  },
+  {
+    id: "IMG_4353_m6btp3",
+    alt: "Multiple custom fashion illustration portraits of wedding guests by Hafsa",
+  },
+  {
+    id: "IMG_5526_mhxks7",
+    alt: "Custom hand-drawn wedding couple portrait illustration by Hafsa",
+  },
+  {
+    id: "IMG_0786_u0kxoe",
+    transforms: "e_brightness:5",
+    alt: "Custom fashion illustration of Indian wedding couple in traditional attire by Hafsa",
+  },
 ];
 
 const customPortraits = () => {
