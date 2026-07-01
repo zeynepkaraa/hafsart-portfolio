@@ -1,5 +1,6 @@
 import EventPage from "../EventPage/EventPage";
 import { getImageProps } from "../../../utils/cloudinary";
+import SEO from "../../SEO.jsx";
 
 const birthdayImages = [
   { id: "Tezza-1889_tjj0cf" },
@@ -25,11 +26,19 @@ const birthdayImages = [
 
 const BirthdaysAndShowers = () => {
   return (
-    <EventPage
-      title="Birthday & Showers"
-      images={birthdayImages}
-      getImageProps={getImageProps}
-    />
+    <>
+      <SEO
+        title="Birthdays & Bridal Showers | Hafsart Live Illustration"
+        description="Make your birthday, bridal shower or special occasion unforgettable with live fashion illustration. Hafsa creates beautiful hand-drawn portraits your guests will treasure."
+        keywords="birthday illustration, bridal shower artist, live illustration party, special occasion artist, bridal shower Toronto, birthday fashion illustration"
+        image="https://res.cloudinary.com/dtowqekrg/image/upload/v1782880004/hafsart_thumbnail_simf0y.jpg"
+      />
+      <EventPage
+        title="Birthday & Showers"
+        images={birthdayImages}
+        getImageProps={getImageProps}
+      />
+    </>
   );
 };
 

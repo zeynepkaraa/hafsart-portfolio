@@ -1,5 +1,6 @@
 import EventPage from "../EventPage/EventPage";
 import { getImageProps } from "../../../utils/cloudinary";
+import SEO from "../../SEO.jsx";
 
 const brandImages = [
   { id: "IMG_0879_wwtsev", crop: "c_crop,g_north_west,h_3068,w_4284,y_1698" },
@@ -18,12 +19,20 @@ const brandImages = [
 
 const BrandEvents = () => {
   return (
-    <EventPage
-      title="Brand Events"
-      logos={true}
-      images={brandImages}
-      getImageProps={getImageProps}
-    />
+    <>
+      <SEO
+        title="Brand Event Illustration | Hafsart Live Art"
+        description="Elevate your brand event with live fashion illustration. Hafsa creates stunning hand-drawn portraits that engage guests and leave a lasting impression. Available across Toronto."
+        keywords="brand event illustration, live art activation, corporate event artist, fashion illustration brand event, live sketching activation, brand experience Toronto"
+        image="https://res.cloudinary.com/dtowqekrg/image/upload/v1782880004/hafsart_thumbnail_simf0y.jpg"
+      />
+      <EventPage
+        title="Brand Events"
+        logos={true}
+        images={brandImages}
+        getImageProps={getImageProps}
+      />
+    </>
   );
 };
 

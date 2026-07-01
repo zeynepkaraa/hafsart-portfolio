@@ -1,5 +1,6 @@
 import EventPage from "../EventPage/EventPage";
 import { getImageProps } from "../../../utils/cloudinary";
+import SEO from "../../SEO.jsx";
 
 const weddingsImages = [
   {
@@ -34,11 +35,20 @@ const weddingsImages = [
 
 const Weddings = () => {
   return (
-    <EventPage
-      title="Weddings"
-      images={weddingsImages}
-      getImageProps={getImageProps}
-    />
+    <>
+      {" "}
+      <SEO
+        title="Wedding Illustration | Hafsart Live Fashion Art"
+        description="Live fashion illustration at your wedding day. Hafsa creates elegant hand-drawn portraits of your guests as a unique and memorable wedding experience. Based in Toronto."
+        keywords="wedding live illustration, wedding artist Toronto, live sketching wedding, wedding fashion illustration, bridal live art, wedding guest portraits"
+        image="https://res.cloudinary.com/dtowqekrg/image/upload/v1782880004/hafsart_thumbnail_simf0y.jpg"
+      />
+      <EventPage
+        title="Weddings"
+        images={weddingsImages}
+        getImageProps={getImageProps}
+      />
+    </>
   );
 };
 

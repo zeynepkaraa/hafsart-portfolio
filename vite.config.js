@@ -18,6 +18,8 @@ export default defineConfig({
         "/live",
         "/custom",
         "/wedding",
+        "/brand",
+        "/other",
       ],
     }),
   ],
