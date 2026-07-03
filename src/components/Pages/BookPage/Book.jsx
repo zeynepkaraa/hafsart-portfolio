@@ -128,7 +128,7 @@ const Book = () => {
               />
             ))}
           </div>
-          <p className="description">
+          <p className={styles.addOnDescription}>
             All packages are fully customizable. Hours, number of artists, and
             add-ons can all be tailored to suit your event and vision.
           </p>

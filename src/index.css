@@ -118,7 +118,7 @@ html {
 
 .description {
   margin: 2% 0;
-  font-size: clamp(15px, 1.2vw, 20px);
+  font-size: clamp(18px, 1.2vw, 24x);
   color: #8b9ab0;
 }
 

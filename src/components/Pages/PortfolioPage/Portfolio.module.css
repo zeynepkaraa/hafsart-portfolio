@@ -15,7 +15,7 @@
 
 .title {
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(24px, 2.5vw, 42px);
   color: #c5adc5;
   font-weight: 600;
 }

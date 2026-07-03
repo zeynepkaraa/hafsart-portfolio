@@ -47,11 +47,12 @@
 .link {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: clamp(16px, 1.2vw, 26px);
   margin-bottom: 8px;
 }
 
 .divider {
+  width: 100%;
   margin: 20px 0;
   border: none;
   border-top: 1px solid #ddd;
@@ -71,14 +72,14 @@
 }
 
 .copyright {
-  font-size: 0.875rem;
+  font-size: clamp(14px, 0.9vw, 18px);
   color: #433982;
 }
 
-.copyrightLink {
+.copyright {
   text-decoration: none;
   color: #433982;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .socialIcons {
@@ -95,6 +96,6 @@
 
 .icon {
   color: #ffffff;
-  font-size: 1.7rem;
+  font-size: clamp(1.7rem, 2.2vw, 2.8rem);
   text-decoration: none;
 }
