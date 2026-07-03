@@ -52,7 +52,7 @@
 }
 
 .menuItems a {
-  font-size: clamp(16px, 1.3vw, 22px);
+  font-size: clamp(16px, 1.3vw, 24px);
   text-decoration: none;
   color: white;
 }
