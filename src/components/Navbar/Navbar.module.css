@@ -102,11 +102,6 @@
     padding: 24px 33px;
   }
 
-  .menuItems a {
-    font-size: 28px;
-    color: #433982;
-  }
-
   .menuOpen {
     display: flex;
     z-index: 1;
