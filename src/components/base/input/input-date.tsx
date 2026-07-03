@@ -119,7 +119,7 @@ export const InputDateBase = ({
       ref={groupRef}
       className={({ isFocusWithin, isDisabled, isInvalid }) =>
         cx(
-          "group/input relative flex w-full flex-row place-content-center place-items-center rounded-lg bg-primary shadow-xs ring-1 ring-primary transition-shadow duration-100 ease-linear ring-inset",
+          "group/input relative flex w-full flex-row place-content-center place-items-center rounded-m bg-primary shadow-xs ring-1 ring-primary transition-shadow duration-100 ease-linear ring-inset",
 
           isFocusWithin && !isDisabled && "ring-2 ring-brand",
 
@@ -212,7 +212,7 @@ export const InputDateBase = ({
         >
           <span
             aria-hidden="true"
-            className="pointer-events-none rounded px-1 py-px text-xs font-medium text-quaternary ring-1 ring-secondary select-none ring-inset"
+            className="pointer-events-none rounded px-1 py-px text-xs font-medium text-quaternary ring-1 ring-customborder select-none ring-inset"
           >
             {typeof shortcut === "string" ? shortcut : "⌘K"}
           </span>

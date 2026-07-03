@@ -5,8 +5,8 @@ import type {
   LinkProps as AriaLinkProps,
 } from "react-aria-components";
 import { Button as AriaButton, Link as AriaLink } from "react-aria-components";
-import { cx, sortCx } from "../../../utils/cx";
-import { isReactComponent } from "../../../utils/is-react-component";
+import { cx, sortCx } from "@/utils/cx";
+import { isReactComponent } from "@/utils/is-react-component";
 
 export const styles = sortCx({
   common: {
@@ -32,7 +32,7 @@ export const styles = sortCx({
     },
     sm: {
       root: [
-        "gap-1 rounded-md px-3 py-2 text-sm font-semibold before:rounded-[7px] data-icon-only:p-2",
+        "gap-1 rounded-lg px-3 py-2 text-sm font-semibold before:rounded-[7px] data-icon-only:p-2",
         "in-data-input-wrapper:px-3.5 in-data-input-wrapper:py-2.5 in-data-input-wrapper:data-icon-only:p-2.5",
       ].join(" "),
       linkRoot: "gap-1 *:data-text:underline-offset-3",
@@ -57,7 +57,7 @@ export const styles = sortCx({
   colors: {
     primary: {
       root: [
-        "bg-custom text-white shadow-xs-skeuomorphic ring-1 ring-transparent ring-inset hover:bg-brand-solid_hover data-loading:bg-brand-solid_hover",
+        "bg-brand-solid text-white shadow-xs-skeuomorphic ring-1 ring-transparent ring-inset hover:bg-brand-solid_hover data-loading:bg-brand-solid_hover",
         // Inner border gradient
         "before:absolute before:inset-px before:border before:border-white/12 before:mask-b-from-0%",
         // Icon styles
@@ -66,7 +66,7 @@ export const styles = sortCx({
     },
     secondary: {
       root: [
-        "bg-primary text-secondary shadow-xs-skeuomorphic ring-inset hover:bg-primary_hover hover:text-secondary_hover data-loading:bg-primary_hover",
+        "bg-primary text-secondary shadow-xs-skeuomorphic ring-1 ring-primary ring-inset hover:bg-primary_hover hover:text-secondary_hover data-loading:bg-primary_hover",
         // Icon styles
         "*:data-icon:text-fg-quaternary hover:*:data-icon:text-fg-quaternary_hover",
       ].join(" "),
@@ -80,7 +80,7 @@ export const styles = sortCx({
     },
     "link-color": {
       root: [
-        "justify-normal rounded p-0! text-brand-secondary hover:text-brand-secondary_hover",
+        "justify-normal rounded p-0 text-brand-secondary hover:text-brand-secondary_hover",
         // Inner text underline
         "*:data-text:underline *:data-text:decoration-transparent hover:*:data-text:decoration-fg-brand-secondary_alt",
         // Icon styles

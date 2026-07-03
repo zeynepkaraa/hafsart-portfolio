@@ -59,7 +59,16 @@ export const DatePicker = ({
       onChange={setValue}
     >
       <AriaGroup>
-        <Button size={size} color="secondary" iconLeading={CalendarIcon}>
+        <Button
+          size="md"
+          color="secondary"
+          iconLeading={CalendarIcon}
+          className="rounded-sm ring-0 shadow-none bg-white text-gray-600 justify-start"
+          style={{
+            padding: "10px 11px",
+            fontSize: "14px",
+          }}
+        >
           {formattedDate}
         </Button>
       </AriaGroup>

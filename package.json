@@ -12,9 +12,11 @@
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@react-stately/utils": "^3.12.1",
+    "@untitledui/file-icons": "^0.0.9",
     "@untitledui/icons": "^0.0.22",
     "@vercel/analytics": "^2.0.1",
     "axios": "^1.18.1",
+    "motion": "^12.42.2",
     "react": "^18.3.1",
     "react-aria": "^3.50.0",
     "react-aria-components": "^1.19.0",
@@ -28,8 +30,8 @@
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@tailwindcss/vite": "^4.3.2",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
@@ -38,6 +40,7 @@
     "globals": "^15.9.0",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-react-aria-components": "^2.2.0",
+    "typescript": "^5.9.3",
     "vite": "^5.4.1",
     "vite-plugin-sitemap": "^0.8.2",
     "vite-tsconfig-paths": "^6.1.1"

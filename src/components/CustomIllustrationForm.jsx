@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Form.module.css";
 import { IoSend } from "react-icons/io5";
 import { HiCheckCircle } from "react-icons/hi";
+import { FileUpload } from "@/components/application/file-upload/file-upload-base";
 
 const ILLUSTRATION_SIZES = [
   { value: "small", label: 'Small (6"x8")' },
@@ -19,6 +20,7 @@ const CustomIllustrationForm = () => {
     notes: "",
   });
 
+  const [uploadedFiles, setUploadedFiles] = useState([]);
   const [submitted, setSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState(null);
   const [error, setError] = useState("");
@@ -27,6 +29,26 @@ const CustomIllustrationForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // ---- FILE UPLOAD ----
+  const handleDropFiles = (files) => {
+    const newFiles = Array.from(files);
+
+    const mapped = newFiles.map((file) => ({
+      id: Math.random().toString(),
+      name: file.name,
+      size: file.size,
+      type: file.type,
+      fileObject: file,
+      progress: 100,
+    }));
+
+    setUploadedFiles((prev) => [...prev, ...mapped]);
+  };
+
+  const handleDeleteFile = (id) => {
+    setUploadedFiles((prev) => prev.filter((f) => f.id !== id));
   };
 
   // ---- SUBMIT ----
@@ -43,14 +65,13 @@ const CustomIllustrationForm = () => {
       form.append("email", formData.email);
       form.append("notes", formData.notes);
 
+      uploadedFiles.forEach((file) => {
+        form.append("files", file.fileObject);
+      });
+      console.log([...form.entries()]);
       const response = await axios.post(
-        `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID_2}`,
+        "https://formspree.io/f/xkolblye",
         form,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        },
       );
 
       if (response.status === 200 || response.status === 202) {
@@ -65,6 +86,8 @@ const CustomIllustrationForm = () => {
           email: "",
           notes: "",
         });
+
+        setUploadedFiles([]);
       }
     } catch (err) {
       setError("Something went wrong. Please try again later.");
@@ -136,7 +159,7 @@ const CustomIllustrationForm = () => {
           encType="multipart/form-data"
         >
           <div className={styles.formField}>
-            <label>Illustration Size *</label>
+            <label>Illustration Size</label>
             <select
               name="size"
               value={formData.size}
@@ -185,6 +208,30 @@ const CustomIllustrationForm = () => {
               onChange={handleChange}
               placeholder="Describe your illustration — style, subject, any special details..."
             />
+          </div>
+
+          <div className={styles.formField}>
+            <label>Upload Reference Images (optional)</label>
+
+            <FileUpload.Root>
+              <FileUpload.DropZone
+                accept="image/*"
+                hint="Upload PNG, JPG, WEBP"
+                onDropFiles={handleDropFiles}
+                onDropUnacceptedFiles={(f) => console.log("Rejected files", f)}
+              />
+
+              <FileUpload.List>
+                {uploadedFiles.map((file) => (
+                  <FileUpload.ListItemProgressBar
+                    key={file.id}
+                    {...file}
+                    size={file.size}
+                    onDelete={() => handleDeleteFile(file.id)}
+                  />
+                ))}
+              </FileUpload.List>
+            </FileUpload.Root>
           </div>
 
           <button

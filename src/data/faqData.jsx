@@ -19,7 +19,7 @@ export const faqData = [
   {
     question: "Do you travel?",
     answer:
-      "Yes! I am available for travel as long as travel fees and accommodations are covered by the client. Please note that a higher non-refundable deposit of 50% is required for travel bookings.",
+      "Yes! I happily accept travel bookings when they align with my availability. Travel arrangements will be tailored and discussed during the booking process.",
   },
   {
     question: "What do I need to provide for the illustration setup?",

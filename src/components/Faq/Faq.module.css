@@ -32,7 +32,7 @@ a {
 .faqAnswer {
   margin-top: 10px;
   padding-left: 10px;
-  font-size: clamp(14px, 1.1vw, 19px);
+  font-size: clamp(14px, 1.2vw, 20px);
   color: #8b9ab0;
   line-height: 1.6;
 }
