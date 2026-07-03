@@ -1,11 +1,11 @@
 .formContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: clamp(24px, 3vw, 50px);
   justify-content: space-between;
   align-items: flex-start;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: clamp(24px, 3vw, 60px) clamp(16px, 2vw, 40px);
   background: linear-gradient(
     180deg,
     rgba(197, 173, 197, 1) 0%,
@@ -15,7 +15,7 @@
 
 .content {
   flex: 1 1 400px;
-  max-width: 300px;
+  max-width: clamp(280px, 25vw, 380px);
   margin: auto;
   text-align: center;
   position: relative;
@@ -23,37 +23,39 @@
 
 .fieldContainer {
   flex: 1 1 400px;
-  max-width: 520px;
-  margin-right: 60px;
+  max-width: clamp(420px, 40vw, 650px);
+  margin-right: clamp(20px, 4vw, 80px);
 }
 
 .formField {
   padding-bottom: 4px;
   text-align: left;
 }
+
 .formField label {
   display: block;
   margin: 6px 0px;
   font-weight: 600;
   color: white;
-  font-size: 14px;
+  font-size: clamp(13px, 1vw, 17px);
 }
 
 .formField input,
 .formField select {
   width: 100%;
-  padding: 7px 9px;
+  padding: clamp(6px, 0.6vw, 10px) clamp(8px, 0.8vw, 14px);
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: clamp(13px, 1vw, 17px);
   background-color: white;
 }
+
 .formField textarea {
   width: 100%;
-  padding: 7px 9px;
+  padding: clamp(6px, 0.6vw, 10px) clamp(8px, 0.8vw, 14px);
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: clamp(13px, 1vw, 17px);
   resize: vertical;
   min-height: 70px;
   max-height: 35vh;
@@ -62,12 +64,12 @@
 
 .formField ::placeholder {
   color: #ddd;
-  font-size: 13px;
+  font-size: clamp(12px, 0.9vw, 15px);
 }
 
 .error {
   color: red;
-  font-size: 12px;
+  font-size: clamp(11px, 0.8vw, 14px);
 }
 
 .submitButton {
@@ -78,34 +80,35 @@
   width: fit-content;
   background-color: #433982;
   color: white;
-  padding: 9px 16px;
+  padding: clamp(8px, 0.8vw, 13px) clamp(14px, 1.2vw, 22px);
   border: none;
   border-radius: 100px;
-  font-size: 14px;
+  font-size: clamp(13px, 1vw, 18px);
   font-weight: 400;
   cursor: pointer;
 }
+
 .success {
   color: white;
-  font-size: 35px;
+  font-size: clamp(28px, 3vw, 48px);
   margin: auto;
 }
 
 .title {
   color: white;
-  font-size: 28px;
+  font-size: clamp(22px, 2vw, 36px);
   font-weight: 600;
   margin-bottom: 12px;
 }
 
 .description {
   color: white;
-  font-size: 16px;
+  font-size: clamp(14px, 1.1vw, 20px);
 }
 
 .sticker {
   position: absolute;
-  left: 250px;
+  left: clamp(180px, 18vw, 280px);
   top: -45px;
 }
 
@@ -113,27 +116,30 @@
   .description {
     margin-top: 4px;
   }
+
   .submitButton {
     margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    margin: 24px auto 0;
   }
+
   .formContainer {
     margin-top: 20px;
   }
+
   .fieldContainer {
     margin-right: 0;
   }
+
   .content {
     margin-top: 10px;
   }
+
   .sticker {
     position: absolute;
     top: -25px;
     width: 45px;
     height: 45px;
-  }
-  .submitButton {
-    display: flex;
-    justify-content: center;
-    margin: 24px auto 0;
   }
 }

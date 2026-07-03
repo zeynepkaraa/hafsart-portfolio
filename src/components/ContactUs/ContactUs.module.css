@@ -1,11 +1,11 @@
 .container {
   text-align: center;
-  padding: 60px 20px;
+  padding: clamp(40px, 5vw, 80px) clamp(16px, 3vw, 40px);
   margin-bottom: 2%;
 }
 
 .heading {
-  font-size: 30px;
+  font-size: clamp(24px, 2.5vw, 42px);
   font-weight: 600;
   color: #c5adc5;
   margin-bottom: 10px;
@@ -13,15 +13,15 @@
 
 .subtext {
   color: #8b9ab0;
-  font-size: 1rem;
-  margin-bottom: 50px;
+  font-size: clamp(14px, 1.1vw, 20px);
+  margin-bottom: clamp(30px, 4vw, 60px);
 }
 
 .grid {
   display: grid;
-  gap: 40px;
+  gap: clamp(24px, 3vw, 50px);
   grid-template-columns: 1fr;
-  max-width: 900px;
+  max-width: clamp(700px, 65vw, 1100px);
   margin: 0 auto;
 }
 
@@ -38,8 +38,8 @@
 }
 
 .iconWrapper {
-  width: 55px;
-  height: 55px;
+  width: clamp(48px, 4.5vw, 70px);
+  height: clamp(48px, 4.5vw, 70px);
   background: linear-gradient(
     180deg,
     rgba(197, 173, 197, 1) 0%,
@@ -54,11 +54,11 @@
 
 .icon {
   color: white;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
 }
 
 .cardTitle {
-  font-size: 1.2rem;
+  font-size: clamp(16px, 1.3vw, 22px);
   font-weight: 600;
   margin-bottom: 5px;
   color: #433982;
@@ -67,11 +67,12 @@
 .cardSub {
   color: #8b9ab0;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: clamp(13px, 1vw, 17px);
 }
 
 .cardValue {
   color: #433982;
   font-weight: 500;
+  font-size: clamp(13px, 1vw, 17px);
   text-decoration: none;
 }

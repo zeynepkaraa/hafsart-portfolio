@@ -1,25 +1,26 @@
 .faqContainer {
   width: 90%;
-  max-width: 600px;
+  max-width: clamp(600px, 55vw, 900px);
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: clamp(24px, 3vw, 50px);
 }
 
 .faqItem {
   border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  padding: clamp(8px, 0.8vw, 14px) 0;
 }
 
 a {
   color: #433982;
   text-decoration: underline;
 }
+
 .faqQuestion {
   width: 100%;
   text-align: left;
   background: none;
   border: none;
-  font-size: 1.1rem;
+  font-size: clamp(16px, 1.3vw, 22px);
   font-weight: 500;
   cursor: pointer;
   display: flex;
@@ -31,13 +32,15 @@ a {
 .faqAnswer {
   margin-top: 10px;
   padding-left: 10px;
-  font-size: 1rem;
+  font-size: clamp(14px, 1.1vw, 19px);
   color: #8b9ab0;
+  line-height: 1.6;
 }
 
 .faqIcon {
   font-weight: bold;
   margin-left: 10px;
+  font-size: clamp(16px, 1.3vw, 22px);
 }
 
 @media (max-width: 480px) {
