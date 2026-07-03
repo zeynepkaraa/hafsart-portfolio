@@ -38,7 +38,10 @@ const Footer = () => {
         </div>
         <hr className={styles.divider} />
         <div className={styles.footerBottom}>
-          <div className={styles.copyright}>© 2026 Hafsart</div>
+          <div className={styles.copyright}>
+            {" "}
+            <p> © 2026 Hafsart </p>
+          </div>
         </div>
       </div>
     </footer>

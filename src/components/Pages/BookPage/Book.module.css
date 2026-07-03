@@ -23,16 +23,17 @@
 }
 
 .title3 {
-  font-size: 24px;
+  font-size: clamp(18px, 1.8vw, 28px);
   font-weight: 500;
   color: #433982;
   text-align: left;
 }
+
 .addOnsTitle {
   margin-top: 32px;
   margin-bottom: 16px;
   color: #433982;
-  font-size: 24px;
+  font-size: clamp(18px, 1.8vw, 28px);
   font-weight: 500;
 }
 
@@ -43,18 +44,18 @@
 }
 
 .addOn {
-  padding: 24px;
+  padding: clamp(16px, 2vw, 28px);
 }
 
 .addOnTitle {
-  font-size: 18px;
+  font-size: clamp(15px, 1.2vw, 20px);
   font-weight: 600;
   color: #c5adc5;
   margin-bottom: 8px;
 }
 
 .addOnDescription {
-  font-size: 16px;
+  font-size: clamp(14px, 1vw, 18px);
   line-height: 1.6;
   color: #8b9ab0;
 }
@@ -65,8 +66,8 @@
 }
 
 .arch {
-  width: 350px;
-  height: 450px;
+  width: clamp(250px, 22vw, 400px);
+  height: clamp(320px, 28vw, 520px);
   margin-left: 30%;
   border-radius: 330px 330px 0 0;
   background: rgb(234, 222, 234);
@@ -86,8 +87,8 @@
 
 .imgWrapper {
   position: absolute;
-  width: 450px;
-  height: 550px;
+  width: clamp(300px, 30vw, 550px);
+  height: clamp(380px, 38vw, 680px);
   left: 5%;
   border-radius: 5%;
 }
@@ -111,6 +112,7 @@
   margin-bottom: 5%;
   overflow: hidden;
 }
+
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -125,7 +127,7 @@
 }
 
 .modalContent {
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2.5rem);
   border-radius: 8px;
   max-width: 980px;
   width: 100%;
@@ -138,9 +140,9 @@
   background-color: #433982;
   color: white;
   border-radius: 100px;
-  font-size: 18px;
+  font-size: clamp(15px, 1.2vw, 20px);
   font-weight: 300;
-  padding: 12px 26px;
+  padding: clamp(10px, 1vw, 16px) clamp(20px, 2vw, 32px);
   border: none;
   outline: none;
   display: inline-block;
@@ -148,7 +150,7 @@
 }
 
 .faq {
-  padding: 6% 0;
+  padding: clamp(3%, 5vw, 8%) 0;
 }
 
 .link {
@@ -162,12 +164,31 @@
 }
 
 .cards {
-  margin-top: 3%;
-  z-index: 2;
-  display: flex;
-  gap: 25px;
-  padding: 13px;
-  text-align: left;
+  .cards {
+    margin-top: 3%;
+    z-index: 2;
+    display: flex;
+    gap: clamp(16px, 2vw, 30px);
+    padding: 13px;
+    text-align: left;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .grid {
+    margin: 3% 5%;
+    gap: 28px;
+  }
+
+  .packages {
+    margin: 7% 14% 3% 14%;
+  }
+
+  .content {
+    margin-left: 8%;
+  }
 }
 
 @media screen and (max-width: 830px) {
@@ -176,6 +197,7 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
+
   .block {
     flex-direction: column-reverse;
     text-align: center;
@@ -186,10 +208,12 @@
     top: 10%;
     left: 0;
   }
+
   .arch {
     margin-left: 0;
     margin-top: 3%;
   }
+
   .content {
     margin: 0 5%;
     text-align: center;
@@ -200,6 +224,7 @@
     margin-left: 0;
     margin-bottom: 30%;
   }
+
   .description {
     margin-bottom: 5%;
   }
@@ -211,14 +236,17 @@
     text-align: center;
     margin-bottom: 15%;
   }
+
   .faq {
     padding: 10% 0;
   }
+
   .cards {
     gap: 24px;
     flex-direction: column;
     align-items: center;
   }
+
   .addOns {
     grid-template-columns: 1fr;
   }
