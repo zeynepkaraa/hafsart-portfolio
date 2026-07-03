@@ -137,9 +137,6 @@
   }
 
   .sticker {
-    position: absolute;
-    top: -25px;
-    width: 45px;
-    height: 45px;
+    display: none;
   }
 }

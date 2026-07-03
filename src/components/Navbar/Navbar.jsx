@@ -12,19 +12,23 @@ const Navbar = () => {
   const { pathname } = useLocation();
 
   const isOverlay = OVERLAY_PAGES.includes(pathname);
-
   return (
     <nav className={`${styles.navbar} ${isOverlay ? styles.absolute : ""}`}>
       <Link
-        className={`${styles.title} ${!isOverlay ? styles.newTitle : ""}`}
+        className={`${styles.title} ${!isOverlay ? styles.newTitle : ""} ${menuOpen ? styles.titleOpen : ""}`}
         to="/"
       >
         Hafsart
       </Link>
 
+      {/* Overlay outside menu div so it covers full page */}
+      {menuOpen && (
+        <div className={styles.overlay} onClick={() => setMenuOpen(false)} />
+      )}
+
       <div className={styles.menu}>
         <div
-          className={`${styles.menuIcon} ${!isOverlay ? styles.newMenu : ""}`}
+          className={`${styles.menuIcon} ${!isOverlay ? styles.newMenu : ""} ${menuOpen ? styles.menuIconOpen : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <IoMdClose /> : <IoMenu />}
