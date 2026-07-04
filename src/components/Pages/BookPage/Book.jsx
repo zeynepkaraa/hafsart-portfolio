@@ -26,9 +26,9 @@ const packages = [
   },
   {
     packageName: "Luxe",
-    packageType: "4+ Hours • 2+ artists ",
+    packageType: "4+ Hours • 2+ artists",
     description:
-      "For large-scale events. Includes up to 80+ guest illustrations,  two or more illustrators.",
+      "For large-scale events. Includes up to 80+ guest illustrations, two or more illustrators.",
   },
 ];
 
@@ -36,22 +36,22 @@ const steps = [
   {
     title: "Fill Out the Form",
     description:
-      "Once you’re ready to get started, please fill out the form with details about your event. This helps me understand your requirements and provide an accurate quote.",
+      "Once you're ready to get started, please fill out the form with details about your event. This helps me understand your requirements and provide an accurate quote.",
   },
   {
     title: "Consultation",
     description:
-      "We’ll discuss the details of your event, including the style of illustration you’re looking for and any specific themes or ideas you have in mind.",
+      "We'll discuss the details of your event, including the style of illustration you're looking for and any specific themes or ideas you have in mind.",
   },
   {
     title: "Set-Up",
     description:
-      "I’ll bring all the necessary materials and set up a dedicated space where guests can come up to the table. I’ll take a picture of each guest for reference.",
+      "I'll bring all the necessary materials and set up a dedicated space where guests can come up to the table. I'll take a picture of each guest for reference.",
   },
   {
     title: "Delivery",
     description:
-      "Guests are free to enjoy the event while I sketch quietly in the background. Once their illustration is ready, they can stop by table and pick it up.",
+      "Guests are free to enjoy the event while I sketch quietly in the background. Once their illustration is ready, they can stop by the table and pick it up.",
   },
 ];
 
@@ -64,6 +64,7 @@ const Book = () => {
       element?.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
+
   return (
     <>
       <SEO
@@ -74,14 +75,16 @@ const Book = () => {
       />
       <div className={styles.page}>
         <Navbar />
-        <div className={styles.container}>
+
+        {/* Hero — full viewport height */}
+        <div className={styles.hero}>
           <div className={styles.block}>
             <div className={styles.content}>
-              <h1 className="title-primary"> What is Live Illustration?</h1>
+              <h1 className="title-primary">What is Live Illustration?</h1>
               <p className="description">
                 Live illustration is sketching guests in real time to capture
                 their outfits and energy in elegant, hand-drawn fashion
-                portraits. It’s a creative and personal gift for your guests,
+                portraits. It's a creative and personal gift for your guests,
                 making your event more memorable.
               </p>
               <button
@@ -97,12 +100,19 @@ const Book = () => {
             </div>
             <div className={styles.visual}>
               <div className={styles.imgWrapper}>
-                <img className={styles.image} src="/images/live.png" />
+                <img
+                  className={styles.image}
+                  src="/images/live.png"
+                  alt="Hafsa creating live fashion illustrations at an event"
+                />
               </div>
               <div className={styles.arch}></div>
             </div>
           </div>
+        </div>
 
+        {/* How It Works — always starts below fold */}
+        <div className={styles.container}>
           <h2 className="title-secondary">How It Works</h2>
           <div className={styles.grid}>
             {steps.map((step, index) => (
@@ -116,6 +126,7 @@ const Book = () => {
             ))}
           </div>
         </div>
+
         <div className={styles.packages}>
           <h2 className="title-secondary">Popular Packages</h2>
           <div className={styles.cards}>
@@ -133,6 +144,7 @@ const Book = () => {
             add-ons can all be tailored to suit your event and vision.
           </p>
         </div>
+
         <div className={styles.packages}>
           <h4 className={styles.addOnsTitle}>Add-ons</h4>
           <div className={styles.addOns}>
@@ -163,9 +175,11 @@ const Book = () => {
         <div id="booking-section" className={styles.bookingSection}>
           <BookingForm />
         </div>
+
         <div id="contact-section">
           <ContactUs />
         </div>
+
         <Footer />
       </div>
     </>
