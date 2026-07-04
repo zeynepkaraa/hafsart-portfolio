@@ -16,7 +16,8 @@
 
 .arches {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: clamp(16px, 2vw, 40px);
   margin: 4% 10%;
 }
 
